@@ -7,7 +7,6 @@ const HOME_PAGE = 'http://localhost:3000'
 class AddressBookWorld {
   constructor() {}
 
-  // Open the home page using puppeteer
   async openHomePage() {
     this.browser = await puppeteer.launch({headless: false, slowmo: 100})
     this.page = await this.browser.newPage()
@@ -20,7 +19,7 @@ class AddressBookWorld {
     const pageContent = await this.page.content()
     const actualContent = pageContent.match(expectedContent)[0]
 
-    expect(actualContent).to.be.eq(expectedContent)
+    expect(actualContent).to.be.eq(expectedContent) // ==
   }
   async clickOnAddContactBtn(btnName) {
     const btnSelector = this.btnSelectorFromName(btnName.toLowerCase())
@@ -50,7 +49,7 @@ class AddressBookWorld {
     const actualCount = await this.page.evaluate(
       () => JSON.parse(window.localStorage.getItem('contacts')).length
     ) 
-    expect(actualCount).to.be.eq(expectedCount)
+    expect(actualCount) == (expectedCount) // .to.be.eq
   }
 }
 
