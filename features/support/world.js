@@ -21,7 +21,7 @@ class AddressBookWorld {
 
     expect(actualContent).to.be.eq(expectedContent) // ==
   }
-  async clickOnAddContactBtn(btnName) {
+  async clickOnButton(btnName) {
     const btnSelector = this.btnSelectorFromName(btnName.toLowerCase())
     await this.page.waitForSelector(btnSelector)
     await this.page.click(btnSelector)
@@ -50,6 +50,12 @@ class AddressBookWorld {
       () => JSON.parse(window.localStorage.getItem('contacts')).length
     ) 
     expect(actualCount) == (expectedCount) // .to.be.eq
+  }
+  async pageDoesNotHaveTextContent(unexpectedContent) {
+    const pageContent = await this.page.content()
+    let actualContent = pageContent.match(unexpectedContent)
+
+    expect(actualContent).to.be.eq(null)
   }
 }
 

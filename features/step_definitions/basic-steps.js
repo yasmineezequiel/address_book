@@ -13,7 +13,7 @@ Then('I should see {string}', async function(content) {
 })
 
 When('I click {string}', async function(string) {
-  return await this.clickOnAddContactBtn(string)
+  return await this.clickOnButton(string)
 })
 
 Then('I fill in {string} with {string}', async function(field, content) {
@@ -24,7 +24,6 @@ Then('I should have {int} contact in my address book', async function(contactCou
   return await this.checkContactStorageCount(contactCount)
 })
 
-Then('I should not see {string}', async function(string) {
-  // Write code here that turns the phrase above into concrete actions
-  return 'pending'
+Then('I should not see {string}', async function (content) {
+  return await this.pageDoesNotHaveTextContent(content)
 })
