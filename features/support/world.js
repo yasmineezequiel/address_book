@@ -49,7 +49,7 @@ class AddressBookWorld {
     const actualCount = await this.page.evaluate(
       () => JSON.parse(window.localStorage.getItem('contacts')).length
     ) 
-    expect(actualCount) == (expectedCount) // .to.be.eq
+    expect(actualCount).to.be.eq(expectedCount) // .to.be.eq
   }
   async pageDoesNotHaveTextContent(unexpectedContent) {
     const pageContent = await this.page.content()
