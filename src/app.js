@@ -23,9 +23,22 @@ const renderContacts = () => {
           <a class="header">${ contact.name }</a>
           
           <div class="description">
-          ${ contact.company } |
-          ${ contact.email } | 
-          <a href="https://www.twitter.com/${ contact.twitter}">@${contact.twitter}</a>
+          <div class="ui list">
+            <div> ${ contact.company }
+            </div>
+            <div class="item">
+              <i class="mail icon"></i>
+              <div class="content">
+              ${ contact.email }
+              </div>
+            </div>
+            <div class="item">
+              <i class="linkify icon"></i>
+              <div class="content">
+              <a href="https://www.twitter.com/${ contact.twitter}">@${contact.twitter}</a>
+              </div>
+            </div>
+            </div>
           </div>
         </div>
         <div class="extra content">

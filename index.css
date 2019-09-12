@@ -24,4 +24,14 @@ h1 {
 
 .contact-list >ul {
 list-style-type: none;
+display: block;
 }
+
+ul.contact-list >li {
+  display: inline;
+}
+
+.ui.yellow.button{
+  color: black; 
+}
+
