@@ -2,8 +2,8 @@
   "name": "address_book",
   "version": "1.0.0",
   "main": "index.js",
-  "repository": "https://github.com/yasmineezequiel/address_book.git",
-  "author": "yasmine <yasmine.ezequiel@gmail.com>",
+  "repository": "https://github.com/lucamarial/address_book.git",
+  "author": "luca <l.lobacher@web.de>",
   "license": "MIT",
   "devDependencies": {
     "@babel/core": "^7.6.0",
@@ -21,6 +21,7 @@
   "scripts": {
     "build": "webpack --progress --p --mode=production",
     "watch": "webpack --progress --watch --mode=development",
-    "cucumber": "..."
+    "cucumber": "superstatic -p 3000 2> /dev/null & cucumber-js; lsof -ti tcp:3000 | xargs kill",
+    "serve": "superstatic -p 3000"
   }
 }
