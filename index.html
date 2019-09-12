@@ -17,23 +17,39 @@
   
   
 
-<div class="contact-list">
+<div class="contact-list" id="ui grid">
 </div>
 <button class="add-contact ui yellow button">Add Contact</button>
   <form class="new-contact-form" action="#">
-      <label for="name">Name</label>
-      <input id="contact-name" name="name" type="text">
-      <label for="email">Email</label>
-      <input id="contact-email" name="email" type="email">
-      <label for="phone">Phone</label>
-      <input id="contact-phone" name="phone" type="text">
-      <label for="company">Company</label>
-      <input id="contact-company" name="company" type="text">
-      <label for="notes">Notes</label>
-      <textarea id="contact-notes" name="notes" type="text"></textarea>
-      <label for="twitter">Twitter</label>
-      <input id="contact-twitter" name="twitter" type="text">
-      <input class="save-contact" type="submit" value="Save contact">
+    <ul id="input_list">
+      <li>
+      <label for="name"></label>
+        <div class="ui input focus">
+          <input id="contact-name" name="name" type="text" placeholder="Name">
+        </div>
+      <label for="email"></label>
+        <div class="ui input focus">
+          <input id="contact-email" name="email" type="email" placeholder="Email">
+        </div>
+      <label for="phone"></label>
+        <div class="ui input focus">
+          <input id="contact-phone" name="phone" type="text" placeholder="Phone">
+        </div>
+      <label for="company"></label>
+        <div class="ui input focus">
+          <input id="contact-company" name="company" type="text" placeholder="Company">
+        </div>
+      <label for="twitter"></label>
+        <div class="ui input focus">
+          <input id="contact-twitter" name="twitter" type="text" placeholder="Twitter">
+        </div>
+      </li>
+      <li id="Notes_list">
+      <label for="notes"></label>
+      <textarea id="contact-notes" name="notes" type="text" placeholder="Notes"></textarea>
+      </li>
+    </ul>
+      <input class="save-contact ui yellow button" type="submit" value="Save contact">
   </form>
   <script src="./dist/bundle.js"></script>
 </body>
