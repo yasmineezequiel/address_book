@@ -15,18 +15,26 @@ const renderContacts = () => {
     contacts.forEach(contact => {
       let li = document.createElement('li')
       li.innerHTML = `
-        <div class="card">
-          <div class="image">
-            <img src="https://ca-address-book.herokuapp.com/images/pine.jpg" />
-          </div>
-          <div class="content">
-            <h1>${ contact.name }</h1>
-            <h2>${ contact.company }</h2>
-            <p>${ contact.notes }</p> 
-            ${ contact.email } | 
-            <a href="https://www.twitter.com/${ contact.twitter}">@${contact.twitter}</a>
+      <div class="ui card">
+        <div class="image">
+          <img src="https://semantic-ui.com/images/avatar/large/daniel.jpg">
+        </div>
+        <div class="content">
+          <a class="header">${ contact.name }</a>
+          
+          <div class="description">
+          ${ contact.company } |
+          ${ contact.email } | 
+          <a href="https://www.twitter.com/${ contact.twitter}">@${contact.twitter}</a>
           </div>
         </div>
+        <div class="extra content">
+          <a>
+            <i class="user icon"></i>
+            <p>${ contact.notes }</p> 
+          </a>
+        </div>
+      </div>
      `
       ul.appendChild(li)
     })
