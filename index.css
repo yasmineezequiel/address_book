@@ -39,7 +39,10 @@ ul.contact-list >li {
   float: left;
   padding: ;
   margin: 10px;
+}
 
+#card-div.ui.card {
+  min-height: 430px;
 }
 
 .ui.yellow.button{
