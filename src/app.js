@@ -10,13 +10,13 @@ const renderContacts = () => {
   if (contacts) {
     div.innerHTML = ''
 
-    const ul = document.createElement('ul')
+    const ul = document.createElement('div')
 
     contacts.forEach(contact => {
-      let li = document.createElement('li')
+      let li = document.createElement('div')
       li.innerHTML = `
-      <div class="ui column">
-      <div class="ui card">
+      
+      <div class="ui card" id="card-div">
         <div class="image">
           <img src="https://semantic-ui.com/images/avatar/large/daniel.jpg">
         </div>
@@ -48,7 +48,6 @@ const renderContacts = () => {
             <p>${ contact.notes }</p> 
           </a>
         </div>
-      </div>
       </div>
      `
       ul.appendChild(li)

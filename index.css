@@ -30,6 +30,18 @@ ul.contact-list >li {
   display: inline;
 }
 
+.contact-list {
+  display: grid;
+}
+
+#card-div {
+  display: block;
+  float: left;
+  padding: ;
+  margin: 10px;
+
+}
+
 .ui.yellow.button{
   color: black; 
 }
