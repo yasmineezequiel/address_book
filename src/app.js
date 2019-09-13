@@ -48,6 +48,10 @@ const renderContacts = () => {
             <p>${ contact.notes }</p> 
           </a>
         </div>
+        <button class="delete-contact ui black basic button " onClick="this.parentNode.parentNode.removeChild(this.parentNode);">
+              <i class="icon user"></i>
+              Delete Contact
+            </button>
       </div>
      `
       ul.appendChild(li)
@@ -95,4 +99,5 @@ document.addEventListener('DOMContentLoaded', () => {
     renderContacts()
     addContactForm.reset()
   })
+
 })

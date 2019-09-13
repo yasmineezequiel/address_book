@@ -17,52 +17,52 @@
   
   
 
-<div class="contact-list">
-</div>
-<div class="inputform">
-<button class="add-contact ui black basic button">
-  <i class="icon user"></i>
-  Add Contact
-</button> 
-
-
-  <form class="new-contact-form" action="#">
-    <ul id="input_list">
-      <li>
-      <label for="name"></label>
-        <div class="ui input focus">
-          <input id="contact-name" name="name" type="text" placeholder="Name">
-        </div>
-      <label for="email"></label>
-        <div class="ui input focus">
-          <input id="contact-email" name="email" type="email" placeholder="Email">
-        </div>
-      <label for="phone"></label>
-        <div class="ui input focus">
-          <input id="contact-phone" name="phone" type="text" placeholder="Phone">
-        </div>
-      <label for="company"></label>
-        <div class="ui input focus">
-          <input id="contact-company" name="company" type="text" placeholder="Company">
-        </div>
-      <label for="twitter"></label>
-        <div class="ui input focus">
-          <input id="contact-twitter" name="twitter" type="text" placeholder="Twitter">
-        </div>
-      </li>
-      <li id="Notes_list">
-      <label for="notes"></label>
-      <textarea id="contact-notes" name="notes" type="text" placeholder="Notes"></textarea>
-      </li>
-    </ul>
-      <input class="save-contact ui yellow button" type="submit" value="Save contact">
-  </form>
-  <button class="delete-contact ui black basic button">
-    <i class="icon user"></i>
-  Delete Contact
-  </button>
+  <div class="contact-list" id="contactlist">
   </div>
-  <script src="./dist/bundle.js"></script>
+
+  <div class="inputform">
+    <button class="add-contact ui black basic button">
+      <i class="icon user"></i>
+      Add Contact
+    </button> 
+
+
+    <form class="new-contact-form" action="#">
+      <ul id="input_list">
+        <li>
+        <label for="name"></label>
+          <div class="ui input focus">
+            <input id="contact-name" name="name" type="text" placeholder="Name">
+          </div>
+        <label for="email"></label>
+          <div class="ui input focus">
+            <input id="contact-email" name="email" type="email" placeholder="Email">
+          </div>
+        <label for="phone"></label>
+          <div class="ui input focus">
+            <input id="contact-phone" name="phone" type="text" placeholder="Phone">
+          </div>
+        <label for="company"></label>
+          <div class="ui input focus">
+            <input id="contact-company" name="company" type="text" placeholder="Company">
+          </div>
+        <label for="twitter"></label>
+          <div class="ui input focus">
+            <input id="contact-twitter" name="twitter" type="text" placeholder="Twitter">
+          </div>
+        </li>
+        <li id="Notes_list">
+        <label for="notes"></label>
+        <textarea id="contact-notes" name="notes" type="text" placeholder="Notes"></textarea>
+        </li>
+      </ul>
+        <input class="save-contact ui yellow button" type="submit" value="Save contact">
+    </form>
+
+    
+  </div>
+
+    <script src="./dist/bundle.js"></script>
 </body>
 
 </html>
