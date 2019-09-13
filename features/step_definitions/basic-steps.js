@@ -27,3 +27,7 @@ Then('I should have {int} contact in my address book', async function(contactCou
 Then('I should not see {string}', async function(content) {
   return await this.pageDoesNotHaveTextContent(content)
 })
+
+When('I will click {string}', async function(string) {
+  return await this.clickOnDeleteContactBtn(string)
+})
